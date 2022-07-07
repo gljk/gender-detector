@@ -332,7 +332,6 @@ M  Cvijetin                                                     1               
 M  Cvijo                                                        1                     $
 M  Cviko                                                        1                     $
 F  Damjanka                                                     1                     $
-F  Danojlo                                                      1                     $
 M  Danojlo                                                      1                     $
 M  Dobrašin                                                     1                     $
 M  Dobrivoj                                                     1                     $
