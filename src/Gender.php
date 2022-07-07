@@ -6,9 +6,9 @@ namespace GenderDetector;
 
 final class Gender
 {
-    public const MALE = 'male';
-    public const MOSTLY_MALE = 'mostly_male';
-    public const FEMALE = 'female';
-    public const MOSTLY_FEMALE = 'mostly_female';
-    public const UNISEX = 'unisex';
+    public const MALE = 'Male';
+    public const MOSTLY_MALE = 'Male';
+    public const FEMALE = 'Female';
+    public const MOSTLY_FEMALE = 'Female';
+    public const UNISEX = 'Unknown';
 }

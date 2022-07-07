@@ -1,0 +1,560 @@
+# DO NOT CHANGE:   FILE-FORMAT DEFINITION-DATE = 2008-11-16                           $
+#                                                                                     $
+# nam_dict.txt                                                                        $
+# ------------                                                                        $
+#                                                                                     $
+# List of first names and gender.                                                     $
+#                                                                                     $
+# Copyright (c):                                                                      $
+# 2007-2008:  Jörg MICHAEL                                                            $
+#             Rotkäppchenweg 34         email: namequality.pro@googlemail.com         $
+#             30179 Hannover            phone: +49/1573/8492736                       $
+#             Germany                                                                 $
+#                                                                                     $
+# SCCS: @(#) nam_dict.txt  1.2  2008-11-30                                            $
+#                                                                                     $
+# This file is subject to the GNU Free Documentation License.                         $
+# Permission is granted to copy, distribute and/or modify                             $
+# this document under the terms of the GNU Free Documentation                         $
+# License, Version 1.2 or any later version published by the                          $
+# Free Software Foundation; with no Invariant Sections,                               $
+# no Front-Cover Texts, and no Back-Cover Texts.                                      $
+#                                                                                     $
+# This file is distributed in the hope that it will be useful,                        $
+# but WITHOUT ANY WARRANTY; without even the implied warranty                         $
+# of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.                             $
+#                                                                                     $
+# A copy of the license can be found in the file GNU_DOC.TXT.                         $
+# You should have received a copy of the GNU Free Documentation                       $
+# License along with this file;                                                       $
+# if not, write to the  Free Software Foundation, Inc.,                               $
+# 675 Mass Ave, Cambridge, MA 02139, USA.                                             $
+#                                                                                     $
+# There is one important restriction:                                                 $
+# If you modify this file in any way (e.g. add some data),                            $
+# you must also release the changes under the terms of the                            $
+# GNU Free Documentation License.                                                     $
+#                                                                                     $
+# That means you have to give out your changes, and a very good                       $
+# way to do so is mailing them to the address given below.                            $
+# I think this is the best way to promote further development                         $
+# and use of this file.                                                               $
+#                                                                                     $
+# If you have any remarks, feel free to e-mail to:                                    $
+#     ct@ct.heise.de                                                                  $
+#                                                                                     $
+# The author's email address is:                                                      $
+#    namequality.pro@googlemail.com                                                   $
+#                                                                                     $
+#                                                                                     $
+##################################################################################    $
+###  char set  ###################################################################    $
+##################################################################################    $
+#                                                                                     $
+# 2019-05-20                                                                          $
+# Originally, the names stored in this file contained special mapping                 $
+# to represent "non-iso" unicode chars. Now the proper unicode chars are              $
+# used instead and the mapping data is removed                                        $
+#                                                                                     $
+# 2022-02-18                                                                          $
+# Duplicate names were removed to enable better search.                               $
+# Column 30 that contained indication of the name sorting was cleared.                $
+#                                                                                     $
+#                                                                                     $
+# A plus char ('+') "inside" a name symbolizes a '-', ' ' or an empty string          $
+# (this option applies to Arabic, Chinese and Korean names only).                     $
+# Thus, "Jun+Wei" represents the names "Jun-Wei", "Jun Wei" and "Junwei".             $
+#                                                                                     $
+#                                                                                     $
+##################################################################################    $
+###  syntax of name list  ########################################################    $
+##################################################################################    $
+#                                                                                     $
+# # = comment                                                                         $
+#                                                                                     $
+#                                                                                     $
+# Syntax for "normal" name list (do not change):                                      $
+#                                                                                     $
+#    M  <male first name>                                                             $
+#    1M <male name, if first part of name;                                            $
+#            else: mostly male name>                                                  $
+#    ?M <mostly male name (= unisex name, which is mostly male)>                      $
+#                                                                                     $
+#    F  <female first name>                                                           $
+#    1F <female name, if first part of name;                                          $
+#            else: mostly female name>                                                $
+#    ?F <mostly female name (= unisex name, which is mostly female)>                  $
+#                                                                                     $
+#    ?  <unisex name (= can be male or female)>                                       $
+#                                                                                     $
+#                                                                                     $
+# Syntax for "equivalent" names (do not change):                                      $
+#                                                                                     $
+#    =  <short_name> <long_name>                                                      $
+#                                                                                     $
+#                                                                                     $
+#                                                                                     $
+#                                                                                     $
+# Note:                                                                               $
+# To enable better searches in the program "gender.c" (also by the same author),      $
+# names containing "expandable" umlauts are printed twice in this dictionary.         $
+#                                                                                     $
+# A '-' in column 30 indicates that the sorting was done according to                 $
+# "compressed" umlauts (i.e. "Käte" sorted after "Kate"),                             $
+# while a '+' in column 30 indicates that the sorting was done with "expanded"        $
+# umlauts (i.e. "Käte" sorted after "Kaelyn").                                        $
+#                                                                                     $
+# Anyone wanting to reformat this dictionary is therefore advised to ignore all       $
+# lines containing a '+' in column 30.                                                $
+#                                                                                     $
+#                                                                                     $
+##################################################################################    $
+###  list of countries  ##########################################################    $
+##################################################################################    $
+#                                                                                     $
+#  Frequencies of first names are indicated as single-digit hexadecimal numbers       $
+#  ranging from 1 (= rare) to D (=13) (= extremely common) for the following          $
+#  countries:                                                                         $
+#                                                                                     $
+#                             Great Britain                                           $
+#                             |                                                       $
+#                                                                                     $
+#                              Ireland                                                $
+#                              |                                                      $
+#                                                                                     $
+#                               U.S.A.                                                $
+#                               |                                                     $
+#                                                                                     $
+#                                Italy                                                $
+#                                |                                                    $
+#                                                                                     $
+#                                 Malta                                               $
+#                                 |                                                   $
+#                                                                                     $
+#                                  Portugal                                           $
+#                                  |                                                  $
+#                                                                                     $
+#                                   Spain                                             $
+#                                   |                                                 $
+#                                                                                     $
+#                                    France                                           $
+#                                    |                                                $
+#                                                                                     $
+#                                     Belgium                                         $
+#                                     |                                               $
+#                                                                                     $
+#                                      Luxembourg                                     $
+#                                      |                                              $
+#                                                                                     $
+#                                       the Netherlands                               $
+#                                       |                                             $
+#                                                                                     $
+#                                        East Frisia                                  $
+#                                        |                                            $
+#                                                                                     $
+#                                         Germany                                     $
+#                                         |                                           $
+#                                                                                     $
+#                                          Austria                                    $
+#                                          |                                          $
+#                                                                                     $
+#                                           Swiss                                     $
+#                                           |                                         $
+#                                                                                     $
+#                                            Iceland                                  $
+#                                            |                                        $
+#                                                                                     $
+#                                             Denmark                                 $
+#                                             |                                       $
+#                                                                                     $
+#                                              Norway                                 $
+#                                              |                                      $
+#                                                                                     $
+#                                               Sweden                                $
+#                                               |                                     $
+#                                                                                     $
+#                                                Finland                              $
+#                                                |                                    $
+#                                                                                     $
+#                                                 Estonia                             $
+#                                                 |                                   $
+#                                                                                     $
+#                                                  Latvia                             $
+#                                                  |                                  $
+#                                                                                     $
+#                                                   Lithuania                         $
+#                                                   |                                 $
+#                                                                                     $
+#                                                    Poland                           $
+#                                                    |                                $
+#                                                                                     $
+#                                                     Czech Republic                  $
+#                                                     |                               $
+#                                                                                     $
+#                                                      Slovakia                       $
+#                                                      |                              $
+#                                                                                     $
+#                                                       Hungary                       $
+#                                                       |                             $
+#                                                                                     $
+#                                                        Romania                      $
+#                                                        |                            $
+#                                                                                     $
+#                                                         Bulgaria                    $
+#                                                         |                           $
+#                                                                                     $
+#                                                          Bosnia and Herzegovina     $
+#                                                          |                          $
+#                                                                                     $
+#                                                           Croatia                   $
+#                                                           |                         $
+#                                                                                     $
+#                                                            Kosovo                   $
+#                                                            |                        $
+#                                                                                     $
+#                                                             Macedonia               $
+#                                                             |                       $
+#                                                                                     $
+#                                                              Montenegro             $
+#                                                              |                      $
+#                                                                                     $
+#                                                               Serbia                $
+#                                                               |                     $
+#                                                                                     $
+#                                                                Slovenia             $
+#                                                                |                    $
+#                                                                                     $
+#                                                                 Albania             $
+#                                                                 |                   $
+#                                                                                     $
+#                                                                  Greece             $
+#                                                                  |                  $
+#                                                                                     $
+#                                                                   Russia            $
+#                                                                   |                 $
+#                                                                                     $
+#                                                                    Belarus          $
+#                                                                    |                $
+#                                                                                     $
+#                                                                     Moldova         $
+#                                                                     |               $
+#                                                                                     $
+#                                                                      Ukraine        $
+#                                                                      |              $
+#                                                                                     $
+#                                                                       Armenia       $
+#                                                                       |             $
+#                                                                                     $
+#                                                                        Azerbaijan   $
+#                                                                        |            $
+#                                                                                     $
+#                                                                         Georgia     $
+#                                                                         |           $
+#                                                                                     $
+#                                                          Kazakhstan/Uzbekistan,etc. $
+#                                                                          |          $
+#                                                                                     $
+#                                                                           Turkey    $
+#                                                                           |         $
+#                                                                                     $
+#                                                                       Arabia/Persia $
+#                                                                            |        $
+#                                                                                     $
+#                                                                             Israel  $
+#                                                                             |       $
+#                                                                                     $
+#                                                                              China  $
+#                                                                              |      $
+#                                                                                     $
+#                                                                     India/Sri Lanka $
+#                                                                               |     $
+#                                                                                     $
+#                                                                               Japan $
+#                                                                                |    $
+#                                                                                     $
+#                                                                               Korea $
+#                                                                                 |   $
+#                                                                                     $
+#                                                                             Vietnam $
+#                                                                                  |  $
+#                                                                                     $
+#                                                                     other countries $
+#                                                                                   | $
+#                                                                                     $
+#                                                                                     $
+#                                                                                     $
+#                                                                                     $
+#  Notes:                                                                             $
+#                                                                                     $
+#  1.                                                                                 $
+#  The frequency value 10 has been formatted to represent at least 2 percent          $
+#  of the population. The scale is logarithmic. For countries with very good          $
+#  statistics, each step represents a factor of two. For example, a frequency         $
+#  value of 7 means that the correspondig first name has an absolute frequency        $
+#  between 0.25 and 0.5 percent.                                                      $
+#                                                                                     $
+#  2.                                                                                 $
+#  "Kazakhstan/Uzbekistan,etc."   summarizes the countries                            $
+#  Kazakhstan, Kyrgyzstan, Tajikistan, Turkmenistan and Uzbekistan.                   $
+#                                                                                     $
+#                                                                                     $
+##################################################################################    $
+###  begin of name list  #########################################################    $
+##################################################################################    $
+M  Aćim                                                         1                     $
+M  Aksentije                                                    1                     $
+F  Aleksija                                                     1                     $
+M  Alimpije                                                     1                     $
+M  Atanasije                                                    1                     $
+M  Bane                                                         1                     $
+F  Bisenija                                                     1                     $
+F  Blaginja                                                     1                     $
+M  Blaža                                                        1                     $
+M  Bratoljub                                                    1                     $
+M  Buda                                                         1                     $
+M  Budislav                                                     1                     $
+F  Cajka                                                        1                     $
+F  Caka                                                         1                     $
+F  Ćana                                                         1                     $
+M  Cane                                                         1                     $
+F  Ćanka                                                        1                     $
+F  Časlavka                                                     1                     $
+M  Čeda                                                         1                     $
+F  Čedomirka                                                    1                     $
+M  Ćetko                                                        1                     $
+M  Ćile                                                         1                     $
+M  Ćira                                                         1                     $
+F  Ćirka                                                        1                     $
+F  Ćuba                                                         1                     $
+M  Čubrilo                                                      1                     $
+M  Cvetomir                                                     1                     $
+M  Cvijetin                                                     1                     $
+M  Cvijo                                                        1                     $
+M  Cviko                                                        1                     $
+F  Damjanka                                                     1                     $
+F  Danojlo                                                      1                     $
+M  Danojlo                                                      1                     $
+M  Dobrašin                                                     1                     $
+M  Dobrivoj                                                     1                     $
+F  Dobroslavka                                                  1                     $
+M  Đokica                                                       1                     $
+M  Dositej                                                      1                     $
+M  Dragojlo                                                     1                     $
+M  Dražo                                                        1                     $
+M  Drgorad                                                      1                     $
+M  Đukan                                                        1                     $
+M  Đurađ                                                        1                     $
+M  Đurđe                                                        1                     $
+F  Đurđevka                                                     1                     $
+F  Đurđija                                                      1                     $
+F  Đurđina                                                      1                     $
+F  Dušana                                                       1                     $
+F  Egenija                                                      1                     $
+F  Ekatarina                                                    1                     $
+F  Fanija                                                       1                     $
+F  Fema                                                         1                     $
+M  Filiman                                                      1                     $
+F  Filipinka                                                    1                     $
+M  Filotej                                                      1                     $
+M  Fotije                                                       1                     $
+F  Gaga                                                         1                     $
+M  Gavra                                                        1                     $
+M  Gavrilo                                                      1                     $
+M  Georgije                                                     1                     $
+F  Glorija                                                      1                     $
+F  Goca                                                         1                     $
+F  Gradimirka                                                   1                     $
+M  Gradiša                                                      1                     $
+M  Grigorije                                                    1                     $
+M  Grozdan                                                      1                     $
+M  Gruja                                                        1                     $
+M  Grujica                                                      1                     $
+F  Hranislava                                                   1                     $
+F  Hranislavka                                                  1                     $
+M  Ignjatije                                                    1                     $
+M  Isailo                                                       1                     $
+M  Ivko                                                         1                     $
+M  Jagoš                                                        1                     $
+F  Janovka                                                      1                     $
+F  Javorka                                                      1                     $
+F  Jefimija                                                     1                     $
+M  Jelenko                                                      1                     $
+F  Jelika                                                       1                     $
+M  Jelisije                                                     1                     $
+M  Jeremije                                                     1                     $
+M  Jerotije                                                     1                     $
+F  Jevrosima                                                    1                     $
+M  Jevta                                                        1                     $
+M  Joksim                                                       1                     $
+M  Jugomir                                                      1                     $
+F  Kadivka                                                      1                     $
+F  Kasija                                                       1                     $
+M  Kirilo                                                       1                     $
+M  Kojadin                                                      1                     $
+M  Kornelije                                                    1                     $
+F  Kosara                                                       1                     $
+M  Kristivoje                                                   1                     $
+F  Krsmanija                                                    1                     $
+M  Krstan                                                       1                     $
+F  Kruna                                                        1                     $
+F  Krunoslava                                                   1                     $
+M  Kuzman                                                       1                     $
+M  Laza                                                         1                     $
+M  Leontijr                                                     1                     $
+M  Lepoje                                                       1                     $
+F  Ljeposava                                                    1                     $
+F  Ljubomirka                                                   1                     $
+F  Makrena                                                      1                     $
+F  Mašinka                                                      1                     $
+F  Melenija                                                     1                     $
+M  Melentije                                                    1                     $
+M  Metodije                                                     1                     $
+M  Mijalko                                                      1                     $
+M  Milentije                                                    1                     $
+F  Milesa                                                       1                     $
+M  Mladomir                                                     1                     $
+M  Mojsilo                                                      1                     $
+M  Momcilo                                                      1                     $
+M  Moša                                                         1                     $
+F  Nastasija                                                    1                     $
+F  Nedeljka                                                     1                     $
+M  Negomir                                                      1                     $
+F  Negosava                                                     1                     $
+M  Negoslav                                                     1                     $
+M  Negovan                                                      1                     $
+M  Neško                                                        1                     $
+M  Nićifor                                                      1                     $
+F  Nikolija                                                     1                     $
+M  Ninko                                                        1                     $
+M  Njegoje                                                      1                     $
+M  Njegoš                                                       1                     $
+M  Njegosav                                                     1                     $
+F  Njegosava                                                    1                     $
+F  Njegoslava                                                   1                     $
+M  Njegovan                                                     1                     $
+M  Njeguš                                                       1                     $
+M  Novica                                                       1                     $
+M  Novko                                                        1                     $
+M  Obradin                                                      1                     $
+F  Obradinka                                                    1                     $
+F  Obrenija                                                     1                     $
+F  Oliverka                                                     1                     $
+M  Ostoja                                                       1                     $
+F  Ozarija                                                      1                     $
+F  Pajka                                                        1                     $
+M  Pantelija                                                    1                     $
+F  Pavlija                                                      1                     $
+F  Peladija                                                     1                     $
+F  Pelagija                                                     1                     $
+M  Peran                                                        1                     $
+F  Perka                                                        1                     $
+M  Petronije                                                    1                     $
+F  Petruška                                                     1                     $
+F  Poleksija                                                    1                     $
+F  Poljka                                                       1                     $
+M  Prerad                                                       1                     $
+F  Prodana                                                      1                     $
+M  Prohor                                                       1                     $
+M  Prokopije                                                    1                     $
+F  Prvoslava                                                    1                     $
+F  Prvoslavka                                                   1                     $
+M  Puniša                                                       1                     $
+M  Puriša                                                       1                     $
+F  Radinka                                                      1                     $
+F  Radivojka                                                    1                     $
+M  Radojko                                                      1                     $
+F  Radojla                                                      1                     $
+M  Radojlo                                                      1                     $
+F  Radomirka                                                    1                     $
+M  Radonja                                                      1                     $
+F  Radoslavka                                                   1                     $
+M  Radul                                                        1                     $
+M  Rafailo                                                      1                     $
+M  Rajica                                                       1                     $
+F  Ranđa                                                        1                     $
+M  Ranđel                                                       1                     $
+M  Raško                                                        1                     $
+F  Ratiborka                                                    1                     $
+M  Ratislav                                                     1                     $
+F  Razumenka                                                    1                     $
+M  Ristivoj                                                     1                     $
+M  Ristivoje                                                    1                     $
+F  Rumenka                                                      1                     $
+F  Ruzmirka                                                     1                     $
+F  Sajka                                                        1                     $
+M  Šako                                                         1                     $
+M  Šale                                                         1                     $
+F  Šana                                                         1                     $
+M  Sekula                                                       1                     $
+M  Sergije                                                      1                     $
+F  Simeuna                                                      1                     $
+F  Simonida                                                     1                     $
+M  Šiško                                                        1                     $
+F  Soja                                                         1                     $
+F  Sojka                                                        1                     $
+M  Spira                                                        1                     $
+M  Spridon                                                      1                     $
+M  Srba                                                         1                     $
+M  Sredoje                                                      1                     $
+F  Sretenka                                                     1                     $
+M  Sretoje                                                      1                     $
+M  Srpko                                                        1                     $
+F  Stamenija                                                    1                     $
+F  Stanija                                                      1                     $
+F  Stanojla                                                     1                     $
+M  Stanojlo                                                     1                     $
+M  Stavra                                                       1                     $
+M  Steva                                                        1                     $
+F  Stevanija                                                    1                     $
+F  Stevka                                                       1                     $
+F  Stojadinka                                                   1                     $
+M  Stojiljko                                                    1                     $
+M  Stojmen                                                      1                     $
+M  Stokan                                                       1                     $
+M  Stracimir                                                    1                     $
+M  Strahinja                                                    1                     $
+M  Strajin                                                      1                     $
+F  Svetislavka                                                  1                     $
+M  Svetoje                                                      1                     $
+F  Tada                                                         1                     $
+F  Takosava                                                     1                     $
+M  Tanasko                                                      1                     $
+M  Tatomir                                                      1                     $
+M  Teodosije                                                    1                     $
+M  Teohar                                                       1                     $
+M  Tešman                                                       1                     $
+M  Timotije                                                     1                     $
+M  Tiosav                                                       1                     $
+M  Toda                                                         1                     $
+F  Tomanija                                                     1                     $
+M  Toplica                                                      1                     $
+M  Toša                                                         1                     $
+M  Trivun                                                       1                     $
+F  Ubavka                                                       1                     $
+M  Ugren                                                        1                     $
+M  Uranko                                                       1                     $
+M  Vekoslav                                                     1                     $
+F  Veliborka                                                    1                     $
+M  Višeslav                                                     1                     $
+F  Vlastimirka                                                  1                     $
+F  Vojislava                                                    1                     $
+M  Vujadin                                                      1                     $
+F  Vujadinka                                                    1                     $
+F  Vujka                                                        1                     $
+M  Vukajlo                                                      1                     $
+F  Vuksana                                                      1                     $
+F  Zaga                                                         1                     $
+M  Zaviša                                                       1                     $
+F  Želimirka                                                    1                     $
+F  Živanka                                                      1                     $
+M  Živanko                                                      1                     $
+F  Živodarka                                                    1                     $
+F  Živoratka                                                    1                     $
+F  Živoslava                                                    1                     $
+F  Živoslavka                                                   1                     $
+M  Zlatibor                                                     1                     $
+M  Zlatoje                                                      1                     $
+F  Zlatomirka                                                   1                     $
+M  Zlatoslav                                                    1                     $
+F  Zorislava                                                    1                     $
+F  Zvezdana                                                     1                     $
